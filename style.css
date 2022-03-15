@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+body {
+  font-size: 14px;
+  font-family: "Red Hat Text", sans-serif;
+  background: url(./assets/bg-stars.svg);
+  background-color: hsl(234, 17%, 12%);
+}
+:root {
+  --primary: hsl(237, 18%, 59%);
+  --secondary: hsl(345, 95%, 68%);
+  --White: hsl(0, 0%, 100%);
+  --Dark-desaturated-blue: hsl(236, 21%, 26%);
+  --Very-dark-blue: hsl(234, 17%, 12%);
+}
+
+.title {
+  text-align: center;
+  color: var(--White);
+  font-size: 20px;
+  letter-spacing: 6px;
+  margin-top: 9em;
+  text-transform: uppercase;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.countDownWrapper {
+  display: flex;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  padding: 1em;
+  opacity: 0.9;
+  justify-content: space-around;
+  position: absolute;
+  flex-wrap: wrap;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  width: 600px;
+  flex-wrap: wrap;
+}
+
+.counter {
+  background-color: var(--Dark-desaturated-blue);
+  height: 120px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 45px;
+  border-radius: 5px;
+  color: var(--secondary);
+  flex-wrap: wrap;
+  position: relative;
+}
+.countDownTitle {
+  top: 11em;
+  color: var(--primary);
+  font-size: 12px;
+  position: absolute;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.counter::before {
+  content: "";
+  display: flex;
+  position: absolute;
+  left: -7px;
+  padding: 6px;
+  border-radius: 50%;
+  background-color: hsl(234, 17%, 12%);
+}
+
+.counter::after {
+  content: "";
+  display: flex;
+  position: absolute;
+  right: -7px;
+  padding: 6px;
+  border-radius: 50%;
+  background-color: var(--Very-dark-blue);
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  object-fit: cover;
+  position: absolute;
+  bottom: -12em;
+  width: 100%;
+}
+
+.svg {
+  margin: 10px;
+  z-index: 10;
+  object-fit: cover;
+}
+
+.svg:hover {
+  cursor: pointer;
+  fill: var(--secondary);
+}
+
+.footerimage {
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 375px) {
+  .title {
+    font-size: 21px;
+    letter-spacing: 5px;
+    margin-top: 10em;
+  }
+
+  .countDownWrapper {
+    width: 380px;
+    padding: 5px;
+  }
+  .counter {
+    height: 80px;
+    width: 80px;
+    font-size: 30px;
+  }
+  .countDownTitle {
+    top: 9.5em;
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+}
