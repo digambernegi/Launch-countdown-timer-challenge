@@ -1,7 +1,7 @@
 ## Launch Countdown Timer
 ## Demo
 
-![](https://github.com/digambernegi/Launch-countdown-timer-challenge/assets/screenshot.png)
+![](https://github.com/digambernegi/Launch-countdown-timer-challenge/blob/master/assets/screenshot.png)
 
 
 ## Run Locally
